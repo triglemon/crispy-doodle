@@ -57,6 +57,7 @@
             android:textColor="@color/myLightBLUE"
             android:textSize="25dp" />
 
+<<<<<<< HEAD
         <EditText
             android:id="@+id/username"
             android:layout_width="250dp"
@@ -101,6 +102,42 @@
             app:layout_constraintTop_toBottomOf="@id/guideline3" />
 
     </LinearLayout>
+=======
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:fontFamily="sans-serif-condensed"
+        android:hint="Username"
+        android:background="@drawable/loginpassword"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toTopOf="@id/password"
+        app:layout_constraintLeft_toLeftOf="@id/guideline"
+        app:layout_constraintRight_toRightOf="@id/guideline" />
+
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="48dp"
+        android:fontFamily="sans-serif-condensed"
+        android:hint="Password"
+        android:background="@drawable/loginpassword"
+        android:inputType="numberPassword"
+        app:layout_constraintBottom_toTopOf="@id/guideline3"
+        app:layout_constraintLeft_toLeftOf="@id/guideline"
+        app:layout_constraintRight_toRightOf="@id/guideline" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.7"/>
+>>>>>>> parent of 0a9a843... Added map activity
 
 
 </android.support.constraint.ConstraintLayout>
