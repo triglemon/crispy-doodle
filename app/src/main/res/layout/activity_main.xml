@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#192a56"
     tools:context=".MainActivity">
 
 
@@ -24,55 +25,85 @@
         app:layout_constraintGuide_percent="0.5" />
 
 
-    <Button
-        android:id="@+id/login"
-        android:layout_width="200dp"
-        android:layout_height="45dp"
-        android:background="@drawable/button"
-        android:gravity="center"
-        android:text="login"
-        android:textAllCaps="true"
-        android:textColor="@color/myWHITE"
-        android:textStyle="bold"
-        app:layout_constraintLeft_toLeftOf="@id/guideline"
-        app:layout_constraintRight_toRightOf="@id/guideline"
-        app:layout_constraintTop_toBottomOf="@id/guideline3" />
-
-
-    <EditText
-        android:id="@+id/username"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="15dp"
-        android:fontFamily="sans-serif-condensed"
-        android:hint="Username"
-        android:background="@drawable/loginpassword"
-        android:inputType="textPassword"
-        app:layout_constraintBottom_toTopOf="@id/password"
-        app:layout_constraintLeft_toLeftOf="@id/guideline"
-        app:layout_constraintRight_toRightOf="@id/guideline" />
-
-
-    <EditText
-        android:id="@+id/password"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="48dp"
-        android:fontFamily="sans-serif-condensed"
-        android:hint="Password"
-        android:background="@drawable/loginpassword"
-        android:inputType="numberPassword"
-        app:layout_constraintBottom_toTopOf="@id/guideline3"
-        app:layout_constraintLeft_toLeftOf="@id/guideline"
-        app:layout_constraintRight_toRightOf="@id/guideline" />
-
     <android.support.constraint.Guideline
         android:id="@+id/guideline3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:visibility="visible"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.7"/>
+        android:visibility="visible"
+        app:layout_constraintGuide_percent="0.65" />
+
+    <LinearLayout
+        android:id="@+id/box"
+        android:orientation="vertical"
+        android:layout_width="336dp"
+        android:layout_height="382dp"
+        android:background="@drawable/loginpage"
+        android:gravity="center"
+        android:elevation="2dp"
+        app:layout_constraintBottom_toBottomOf="@id/guideline2"
+        app:layout_constraintLeft_toLeftOf="@id/guideline"
+        app:layout_constraintRight_toRightOf="@id/guideline"
+        app:layout_constraintTop_toTopOf="@id/guideline2">
+
+        <TextView
+            android:id="@+id/welcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25dp"
+            android:layout_marginBottom="15dp"
+            android:text="Welcome"
+            android:textAllCaps="true"
+            android:textColor="@color/myLightBLUE"/>
+        <EditText
+            android:id="@+id/username"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:fontFamily="sans-serif-condensed"
+            android:hint="Username"
+            android:drawableLeft="@drawable/ic_action_user"
+            android:background="@drawable/loginpassword"
+            android:inputType="textVisiblePassword"
+            app:layout_constraintBottom_toTopOf="@id/password"
+            app:layout_constraintLeft_toLeftOf="@id/guideline"
+            app:layout_constraintRight_toRightOf="@id/guideline" />
+
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:fontFamily="sans-serif-condensed"
+            android:hint="Password"
+            android:drawableLeft="@drawable/ic_action_pass"
+            android:background="@drawable/loginpassword"
+            android:inputType="numberPassword"
+            app:layout_constraintBottom_toTopOf="@id/guideline3"
+            app:layout_constraintLeft_toLeftOf="@id/guideline"
+            app:layout_constraintRight_toRightOf="@id/guideline" />
+
+        <Button
+            android:id="@+id/login"
+            android:layout_width="250dp"
+            android:layout_height="45dp"
+            android:background="@drawable/button"
+            android:gravity="center"
+            android:text="login"
+            android:textAllCaps="true"
+            android:textColor="@color/myWHITE"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="@id/guideline"
+            app:layout_constraintRight_toRightOf="@id/guideline"
+            app:layout_constraintTop_toBottomOf="@id/guideline3" />
+
+    </LinearLayout>
+
+
+
+
+
 
 
 </android.support.constraint.ConstraintLayout>
